@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Produto</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #202C5F   ;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <article id="Formulario">
+            <form class="FlexH AlinhadoArd">
+                <label for="productName">Nome do Produto:</label>
+                <input type="text" name="NomeProduto" id="productName" required>
+                <br>
+                <label for="productPrice">Preço do Produto:</label>
+                <input type="number" name="PrecoProduto" min="0" id="productPrice" required>
+                <br>
+                <label for="qtdInput">Quantidade de produtos:</label>
+                <input type="number" name="QuantidadeProduto" id="qtdProduto" required>
+                <br>
+                <label for="categoryInput">Categoria do Produto:</label>
+                <input type="text" name="CategoriaProduto" id="categoryInput" required>
+                <br>
+                <button type="button" class="FlexH AlinhadoCen" id="botaoCadastro">Cadastrar</button>
+                <input type="hidden" id="productId">
+            </form>
+        </article>
+        <article id="Tabela">
+            <table id="tagTabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th class="FlexH AlinhadoArd">
+                            Categoria
+                            <select id="seletorCategoria" onchange="filtrarPorCategoria()">
+                                <option value="">Todas</option>
+                            </select>
+                        </th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyTable">
+                </tbody>
+            </table>
+        </article>
+    </main>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
+
