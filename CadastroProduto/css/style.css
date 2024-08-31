@@ -46,9 +46,22 @@ html,body{
     align-items: center;
  }
 
- form{
-    padding: 1.5vw 1.5vh    ;
+ #Formulario{
+    padding: 1.5vw 1.5vh;
+    width: 95vw;
  }
+
+ fieldset{
+    width: 100%;
+    padding: 1.5vw 1.5vh;
+ }
+
+#descriptionProduct{
+    resize: none;
+    width: 20vw;
+    height: 10vh;
+    
+}
 
 button{
     padding: .8vw .8vh;
@@ -63,7 +76,8 @@ th{
     color:var(--cor1);
 }
 input[type="text"],
-input[type="number"]{
+input[type="number"],
+textarea{
     cursor:pointer;
     padding: 1vw 1vh;
     border-radius: 8px;
@@ -101,4 +115,18 @@ select:hover{
 }
 footer{
     margin-top: 5vh;
+}
+
+.tooltip-box {
+    position: absolute;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    display: none;
+    white-space: nowrap;
+    z-index: 1000;
+    font-size: 12px;
+    pointer-events: none;
 }

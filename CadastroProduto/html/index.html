@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="PT-BR">
 
 <head>
@@ -24,27 +23,34 @@
 
 <body>
     <header></header>
-    <main>
-        <article id="Formulario">
-            <form class="FlexH AlinhadoArd">
-                <label for="productName">Nome do Produto:</label>
-                <input type="text" name="NomeProduto" id="productName" required>
-                <br>
-                <label for="productPrice">Preço do Produto:</label>
-                <input type="number" name="PrecoProduto" min="0" id="productPrice" required>
-                <br>
-                <label for="qtdInput">Quantidade de produtos:</label>
-                <input type="number" name="QuantidadeProduto" id="qtdProduto" required>
-                <br>
-                <label for="categoryInput">Categoria do Produto:</label>
-                <input type="text" name="CategoriaProduto" id="categoryInput" required>
-                <br>
-                <button type="button" class="FlexH AlinhadoCen" id="botaoCadastro">Cadastrar</button>
-                <input type="hidden" id="productId">
+    <main class="FlexV AlinhadoArd">
+        <article id="Formulario" class="FlexH AlinhadoCen">
+            <form class="FlexV AlinhadoArd">
+                <fieldset class="FlexH AlinhadoArd">
+                    <label for="productName">Nome do Produto:</label>
+                    <input type="text" name="NomeProduto" id="productName" required>
+                    <br>
+                    <label for="productPrice">Preço do Produto:</label>
+                    <input type="number" name="PrecoProduto" min="0" id="productPrice" required>
+                    <br>
+                    <label for="qtdInput">Quantidade de produtos:</label>
+                    <input type="number" name="QuantidadeProduto" id="qtdProduto" required>
+                    <br>
+                    <label for="categoryInput">Categoria do Produto:</label>
+                    <input type="text" name="CategoriaProduto" id="categoryInput" required>
+                    <br>
+                </fieldset>
+                <fieldset class="FlexV AlinhadoArd">
+                    <label for="descriptionProduct">Descrição Produto</label>
+                    <textarea name="DescricaoProduto" required id="descriptionProduct"></textarea>
+                    <br>
+                    <button type="button" class="FlexH AlinhadoCen" id="botaoCadastro">Cadastrar</button>
+                    <input type="hidden" id="productId">
+                </fieldset>
             </form>
         </article>
         <article id="Tabela">
-            <table id="tagTabela">
+            <table id="tagTabela" >
                 <thead>
                     <tr>
                         <th>Nome</th>
@@ -62,12 +68,14 @@
                 <tbody id="bodyTable">
                 </tbody>
             </table>
+            <div id="tooltip" class="tooltip-box"></div>
         </article>
     </main>
     <footer class="FlexH AlinhadoArd">
         <p><b>NOME DO ALUNO : </b>João Cristiano Rodrigues Pimenta</p>
     </footer>
     <script src="../js/script.js"></script>
+    <script src="../js/printDescription.js"></script>
 </body>
 
 </html>
